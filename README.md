@@ -16,7 +16,7 @@ Lamina1 is a custom Avalanche subnet using the Ethereum Virtual Machine (EVM). T
 ## Node Installation and Configuration
 To run a Lamina1 node, follow the Avalanche subnet node installation documentation:
 - **Node Installation Guide:** [Avalanche Subnet Node Installation](https://docs.avax.network/nodes/run/subnet-node)
-- **Disk Size Requirement:** 1 TiB SSD
+- **Disk Size Requirement:** <50 GB is needed initially when only syncing the Lamina1 chain and the Avalanche P-Chain. <128 GB is probably safe for the next year or so. Avalanche recommends 1 TB SSD generally for validators. 
 - **Configuration Directory:** [Avalanche Node Configuration](https://docs.avax.network/nodes/configure/avalanchego-config-flags#data-directory)
 
 ### Customizing RPC Port and Data Directory
