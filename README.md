@@ -4,14 +4,25 @@
 Lamina1 is a custom Avalanche subnet using the Ethereum Virtual Machine (EVM). This guide provides essential information for integrating with the Lamina1 blockchain, including API endpoints, node setup, and other important details for exchange integration and wallet support.
 
 ## General Information
+### Mainnet
 - **Website:** [www.lamina1.com](https://www.lamina1.com)
 - **Digital Coin Name:** L1
 - **Symbol:** L1
 - **Chain Name:** Lamina1
 - **Chain Number:** 10849
 - **Public RPC:** [https://subnets.avax.network/lamina1/mainnet/rpc](https://subnets.avax.network/lamina1/mainnet/rpc)
-- **Block Explorer:** [explorer.lamina1.com](https://explorer.lamina1.com)
-- **GitHub Repository:** [github.com/lamina1](https://github.com/lamina1)
+- **Block Explorer:** [https://explorer.lamina1.com](https://explorer.lamina1.com)
+- **GitHub Repository:** [https://github.com/lamina1](https://github.com/lamina1)
+
+### Testnet
+- **Website:** [https://fuji.hubdemo.lamina1.com](https://fuji.hubdemo.lamina1.com/)
+- **Digital Coin Name:** L1 Test
+- **Symbol:** L1T
+- **Chain Name:** Lamina1 Testnet
+- **Chain Number:** 764984
+- **Public RPC:** [https://subnets.avax.network/lamina1tes/testnet/rpc](https://subnets.avax.network/lamina1tes/testnet/rpc)
+- **Block Explorer:** [https://subnets-test.avax.network/lamina1tes](https://subnets-test.avax.network/lamina1tes)
+- **GitHub Repository:** [https://github.com/lamina1](https://github.com/lamina1)
 
 ## Node Installation and Configuration
 To run a Lamina1 node, follow the Avalanche subnet node installation documentation:
