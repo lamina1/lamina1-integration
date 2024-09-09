@@ -39,6 +39,31 @@ To run a Lamina1 node, follow the Avalanche subnet node installation documentati
 - **RPC Port Configuration:** [RPC Port Configuration](https://docs.avax.network/nodes/configure/avalanchego-config-flags#--http-port-int)
 - **Database Configuration:** [Database Configuration](https://docs.avax.network/nodes/configure/avalanchego-config-flags#database)
 
+### Upgrades
+The Lamina1 subnet can undergo upgrades, which require an upgrade file to be provided to `avalanchego`. This is done according to the standard procedure of upgrading a subnet EVM to enable new precompiles for example.
+
+The following link from avalanche docs provides a good overview of the upgrade procedure: https://docs.avax.network/build/subnet/upgrade/upgrade-precompile
+
+Essentially, in order to sync an upgrade, a file named `upgrade.json` has to be created and placed in the chain config directory of `avalanchego`. When using default locations, for the Lamina1 main subnet, the file should be placed at: `~/.avalanchego/configs/chains/UhReZTXT8Cqsjat9ghRtCe5kBQPQexQB5zG5Fvf3egrdYfyoJ/upgrade.json`.
+
+Currently, there has been one upgrade to the Lamina1 subnet, executed on 24 July 2024.
+
+The contents of the `upgrade.json` file are as follows:
+```json
+{
+    "precompileUpgrades": [
+        {
+            "rewardManagerConfig": {
+                "adminAddresses": ["0x444b4a012a240bc0b898e91c70152caee8be26fb"],
+                "blockTimestamp": 1721779200
+            }
+        }
+    ]
+}
+```
+
+The contents of this file will be updated in this repo whenever new upgrades are executed.
+
 ## API Information
 Lamina1 supports standard EVM JSON-RPC methods and you can use the following public API endpoints:
 - **Testnet (Fuji):** [https://subnets.avax.network/lamina1tes/testnet/rpc](https://subnets.avax.network/lamina1tes/testnet/rpc)
