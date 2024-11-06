@@ -39,6 +39,39 @@ To run a Lamina1 node, follow the Avalanche subnet node installation documentati
 - **RPC Port Configuration:** [RPC Port Configuration](https://docs.avax.network/nodes/configure/avalanchego-config-flags#--http-port-int)
 - **Database Configuration:** [Database Configuration](https://docs.avax.network/nodes/configure/avalanchego-config-flags#database)
 
+### Upgrades
+The Lamina1 subnet can undergo upgrades, which require an upgrade file to be provided to `avalanchego`. This is done according to the standard procedure of upgrading a subnet EVM to enable new precompiles for example.
+
+The following link from avalanche docs provides a good overview of the upgrade procedure: https://docs.avax.network/build/subnet/upgrade/upgrade-precompile
+
+Essentially, in order to sync an upgrade, a file named `upgrade.json` has to be created and placed in the chain config directory of `avalanchego`. When using default locations, for the Lamina1 main subnet, the file should be placed at: `~/.avalanchego/configs/chains/UhReZTXT8Cqsjat9ghRtCe5kBQPQexQB5zG5Fvf3egrdYfyoJ/upgrade.json`.
+
+There have been two upgrades to the Lamina1 subnet:
+* Activated RewardManager precompile on 24 July 2024 00:00 UTC
+* Activated NativeMinter precompile on 7 November 2024 13:00 UTC
+
+The contents of the `upgrade.json` file are as follows:
+```json
+{
+  "precompileUpgrades": [
+    {
+      "rewardManagerConfig": {
+        "adminAddresses": ["0x444B4a012a240Bc0B898E91c70152CAeE8BE26FB"],
+        "blockTimestamp": 1721779200
+      }
+    },
+    {
+      "contractNativeMinterConfig": {
+        "blockTimestamp": 1730984400,
+        "adminAddresses": ["0xD95b19ef90eE8862C47415d21E1E8BA0D6Ce359f"]
+      }
+    }
+  ]
+}
+```
+
+The contents of this file will be updated in this repo whenever new upgrades are executed.
+
 ## API Information
 Lamina1 supports standard EVM JSON-RPC methods and you can use the following public API endpoints:
 - **Testnet (Fuji):** [https://subnets.avax.network/lamina1tes/testnet/rpc](https://subnets.avax.network/lamina1tes/testnet/rpc)
