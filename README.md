@@ -46,19 +46,27 @@ The following link from avalanche docs provides a good overview of the upgrade p
 
 Essentially, in order to sync an upgrade, a file named `upgrade.json` has to be created and placed in the chain config directory of `avalanchego`. When using default locations, for the Lamina1 main subnet, the file should be placed at: `~/.avalanchego/configs/chains/UhReZTXT8Cqsjat9ghRtCe5kBQPQexQB5zG5Fvf3egrdYfyoJ/upgrade.json`.
 
-Currently, there has been one upgrade to the Lamina1 subnet, executed on 24 July 2024.
+There have been two upgrades to the Lamina1 subnet:
+* Activated RewardManager precompile on 24 July 2024 00:00 UTC
+* Activated NativeMinter precompile on 7 November 2024 13:00 UTC
 
 The contents of the `upgrade.json` file are as follows:
 ```json
 {
-    "precompileUpgrades": [
-        {
-            "rewardManagerConfig": {
-                "adminAddresses": ["0x444b4a012a240bc0b898e91c70152caee8be26fb"],
-                "blockTimestamp": 1721779200
-            }
-        }
-    ]
+  "precompileUpgrades": [
+    {
+      "rewardManagerConfig": {
+        "adminAddresses": ["0x444B4a012a240Bc0B898E91c70152CAeE8BE26FB"],
+        "blockTimestamp": 1721779200
+      }
+    },
+    {
+      "contractNativeMinterConfig": {
+        "blockTimestamp": 1730984400,
+        "adminAddresses": ["0xD95b19ef90eE8862C47415d21E1E8BA0D6Ce359f"]
+      }
+    }
+  ]
 }
 ```
 
