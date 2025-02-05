@@ -29,6 +29,15 @@ All 4 Lamina1 Chains are on Chainlist
 - **Public RPC:** [https://subnets.avax.network/lamina1tes/testnet/rpc](https://subnets.avax.network/lamina1tes/testnet/rpc)
 - **Block Explorer:** [https://subnets-test.avax.network/lamina1tes](https://subnets-test.avax.network/lamina1tes)
 
+## Lamina1 Testnet (Spaces) Information
+- **Website:** [https://spaces.hubdemo.lamina1.com/](https://spaces.hubdemo.lamina1.com/)
+- **Digital Coin Name:** L1 Test
+- **Symbol:** L1
+- **Chain Name:** Lamina1 Space Testnet
+- **Chain ID:** 7649840
+- **Public RPC:** https://spaces-test.lamina1.network/rpc
+- **Block Explorer:** Not Available
+
 ## Node Installation and Configuration
 To run a Lamina1 node, follow the Avalanche subnet node installation documentation:
 - **Node Installation Guide:** [Avalanche Subnet Node Installation](https://docs.avax.network/nodes/run/subnet-node)
