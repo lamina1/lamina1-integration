@@ -31,7 +31,7 @@ All 4 Lamina1 Chains are on Chainlist
 
 ## Lamina1 Testnet (Spaces) Information
 - **Website:** [https://spaces.hubdemo.lamina1.com/](https://spaces.hubdemo.lamina1.com/)
-- **Digital Coin Name:** L1 Test
+- **Digital Coin Name:** L1
 - **Symbol:** L1
 - **Chain Name:** Lamina1 Space Testnet
 - **Chain ID:** 7649840
